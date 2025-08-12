@@ -33,9 +33,9 @@ const seedDatabase = async () => {
         isActive: true,
       });
 
-      console.log("✅ Demo users created successfully.");
+      // Demo users created successfully
     } else {
-      console.log("✅ Demo users already exist, skipping creation.");
+      // Demo users already exist, skipping creation
     }
   } catch (error) {
     console.error("❌ Error seeding database:", error);
@@ -45,7 +45,7 @@ const seedDatabase = async () => {
 const syncDatabase = async () => {
   try {
     await sequelize.sync({ alter: true });
-    console.log("✅ Database models synchronized successfully.");
+    // Database models synchronized successfully
 
     // Comment out seeding to prevent automatic demo user creation
     // await seedDatabase();
